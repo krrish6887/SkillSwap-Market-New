@@ -18,7 +18,7 @@ export default function SkillDetailSheet({ skill, onClose, currentUser }) {
     mutationFn: async () => {
       // Check if chat already exists
       const existingChats = await base44.entities.Chat.filter({
-        skill_id: skill.id,
+        skill_id: skill._id,
       });
       
       const myChat = existingChats.find(c => 
@@ -32,7 +32,7 @@ export default function SkillDetailSheet({ skill, onClose, currentUser }) {
       return base44.entities.Chat.create({
         participant_emails: [currentUser?.email, skill.created_by],
         participant_names: [currentUser?.full_name, skill.user_name],
-        skill_id: skill.id,
+        skill_id: skill._id,
         skill_title: skill.title,
         last_message: 'Chat started',
         last_message_time: new Date().toISOString(),
