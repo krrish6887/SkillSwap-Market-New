@@ -1,0 +1,66 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "description": "Related skill ID"
+    },
+    "skill_title": {
+      "type": "string",
+      "description": "Skill title"
+    },
+    "teacher_email": {
+      "type": "string",
+      "description": "Teacher's email"
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Teacher's name"
+    },
+    "learner_email": {
+      "type": "string",
+      "description": "Learner's email"
+    },
+    "learner_name": {
+      "type": "string",
+      "description": "Learner's name"
+    },
+    "skillcoins": {
+      "type": "number",
+      "description": "SkillCoins for session"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Scheduled session time"
+    },
+    "location": {
+      "type": "string",
+      "description": "Meeting location"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "description": "Booking status"
+    },
+    "escrow_held": {
+      "type": "boolean",
+      "description": "Whether coins are in escrow"
+    }
+  },
+  "required": [
+    "skill_id",
+    "skill_title",
+    "teacher_email",
+    "learner_email",
+    "skillcoins",
+    "status"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Chat",
+  "type": "object",
+  "properties": {
+    "participant_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Email addresses of participants"
+    },
+    "participant_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Names of participants"
+    },
+    "skill_id": {
+      "type": "string",
+      "description": "Related skill ID"
+    },
+    "skill_title": {
+      "type": "string",
+      "description": "Related skill title"
+    },
+    "last_message": {
+      "type": "string",
+      "description": "Preview of last message"
+    },
+    "last_message_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time of last message"
+    },
+    "unread_count": {
+      "type": "number",
+      "description": "Unread messages count"
+    }
+  },
+  "required": [
+    "participant_emails",
+    "participant_names"
+  ]
+}

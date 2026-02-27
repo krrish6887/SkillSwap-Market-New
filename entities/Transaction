@@ -1,0 +1,41 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "earned",
+        "spent",
+        "escrow",
+        "refund",
+        "bonus"
+      ],
+      "description": "Transaction type"
+    },
+    "amount": {
+      "type": "number",
+      "description": "SkillCoin amount"
+    },
+    "description": {
+      "type": "string",
+      "description": "Transaction description"
+    },
+    "skill_title": {
+      "type": "string",
+      "description": "Related skill"
+    },
+    "other_user": {
+      "type": "string",
+      "description": "Other party's name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "pending",
+        "cancelled"
+      ],
+      "description": "Transaction status"
+    }
+}}

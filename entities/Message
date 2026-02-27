@@ -1,0 +1,41 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "chat_id": {
+      "type": "string",
+      "description": "Parent chat ID"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Sender's email"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Sender's name"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "booking",
+        "system"
+      ],
+      "description": "Message type"
+    },
+    "booking_data": {
+      "type": "object",
+      "description": "Booking details if type is booking"
+    }
+  },
+  "required": [
+    "chat_id",
+    "sender_email",
+    "content",
+    "type"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Skill",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name of the skill"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "teach",
+        "learn"
+      ],
+      "description": "Whether user wants to teach or learn this skill"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Creative",
+        "Tech",
+        "Sports",
+        "Academic",
+        "Music",
+        "Languages"
+      ],
+      "description": "Skill category"
+    },
+    "level": {
+      "type": "string",
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "description": "Skill level"
+    },
+    "skillcoins": {
+      "type": "number",
+      "description": "SkillCoin cost or reward"
+    }}}
